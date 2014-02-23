@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  severity: MyString
+  date: 2014-02-20
+
+two:
+  type: 
+  severity: MyString
+  date: 2014-02-20

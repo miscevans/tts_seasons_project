@@ -1,0 +1,32 @@
+<%= form_for(@allergy) do |f| %>
+  <% if @allergy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@allergy.errors.count, "error") %> prohibited this allergy from being saved:</h2>
+
+      <ul>
+      <% @allergy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="field">
+    <%= f.label :type %>
+    <%= f.radio_button :type, 'Eye', :checked => true %> Eye
+    <%= f.radio_button :type, 'Nasal' %> Nasal
+  </div>
+  <div class="field">
+    <%= f.label :severity %>
+    <%= f.radio_button :severity, 'high', :checked => true %> Crazy. Meds don't help.
+    <%= f.radio_button :severity, 'medium' %> I can deal. Claritin works.
+    <%= f.radio_button :severity, 'low' %> No issues whatsoever. Life is great.
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

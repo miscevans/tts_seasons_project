@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @allergy.type %>
+</p>
+
+<p>
+  <strong>Severity:</strong>
+  <%= @allergy.severity %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @allergy.date %>
+</p>
+
+<%= link_to 'Edit', edit_allergy_path(@allergy) %> |
+<%= link_to 'Back', allergies_path %>
